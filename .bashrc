@@ -24,6 +24,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 alias home="cd /home/jasjitbansia"
+alias root = "cd /"
 alias cls="clear"
 alias rpi='kitty +kitten ssh jasjitbansia@192.168.1.8'
 alias bypass="node /home/jasjitbansia/Code/Discord-Upload-Limit-Bypasser/Local-Scripts/localScript.js"
