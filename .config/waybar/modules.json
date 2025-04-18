@@ -41,11 +41,11 @@
     "on-click": "pavucontrol"
   },
   "network": {
-    "format-wifi": "   {essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-wifi": "",
+    "format-ethernet": "",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
+    "format-disconnected": "⚠",
     "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
   },
   "cpu": {
@@ -86,6 +86,6 @@
   "clock": {
     "format": "{:%H:%M | %e %B} ",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%d-%m-%Y}"
   }
 }
