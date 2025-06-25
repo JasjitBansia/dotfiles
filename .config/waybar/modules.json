@@ -2,7 +2,8 @@
   "custom/arch": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "btw"
+    "tooltip-format": "btw",
+    "on-click": "./.config/rofi/powermenu/type-3/powermenu.sh"
   },
 
   "hyprland/workspaces": {
@@ -25,7 +26,7 @@
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-bluetooth-muted": "  0%",
     "format-muted": " {format_source}",
     "format-source": " {volume}%",
     "format-source-muted": "",
@@ -42,7 +43,7 @@
   },
   "network": {
     "format-wifi": "",
-    "format-ethernet": "",
+    "format-ethernet": "Eth.",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "⚠",
@@ -50,14 +51,15 @@
   },
   "cpu": {
     "format": "  {usage}%",
-    "tooltip": true
+    "tooltip": true,
+    "interval": 1
   },
   "memory": {
     "format": "  {}%",
     "tooltip": true
   },
   "temperature": {
-    "interval": 10,
+    "interval": 1,
     "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
     "critical-threshold": 100,
     "format-critical": " {temperatureC}",

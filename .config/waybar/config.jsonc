@@ -10,12 +10,11 @@
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
-    "cpu",
     "network",
+    "cpu",
     "temperature",
-    "battery",
-    "battery#bat2",
-    "tray"
+    "tray",
+    "custom/arch"
   ],
   //Modules configuration
 
