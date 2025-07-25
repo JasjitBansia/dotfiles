@@ -1,104 +1,116 @@
 * {
-  /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
-  font-size: 15px;
-  transition: background-color 0.3s ease-out;
+  min-height: 0;
+  min-width: 0;
+  font-family: Lexend, "JetBrainsMono NFP";
+  font-size: 16px;
+  font-weight: 600;
 }
 
 window#waybar {
-  background: rgba(26, 27, 38, 0.75);
-  color: #c0caf5;
-  font-size: large;
-  font-family: SpaceMono Nerd Font, feather;
-  transition: background-color 0.5s;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-  background: rgba(0, 0, 8, 0.7);
-  margin: 5px 5px;
-  padding: 0 0px;
-  border-radius: 15px;
-}
-.modules-left {
-  padding: 0;
-}
-.modules-center {
-  padding: 0 0px;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#language,
-#mpd {
-  padding: 0 10px;
-  border-radius: 15px;
-}
-
-#clock:hover,
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#temperature:hover,
-#backlight:hover,
-#network:hover,
-#pulseaudio:hover,
-#wireplumber:hover,
-#custom-media:hover,
-#mode:hover,
-#idle_inhibitor:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
-#language:hover,
-#mpd:hover {
-  background: rgba(26, 27, 38, 0.9);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background-color: #1e1e2e; */
+  /* background-color: #181825; */
+  background-color: #11111b;
+  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
-  background: transparent;
-  font-family: SpaceMono Nerd Font, feather;
-  font-weight: 900;
-  font-size: 13pt;
-  color: #c0caf5;
-  border: none;
-  border-radius: 15px;
-}
-
-#workspaces button.active {
-  background: #13131d;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  box-shadow: none;
+  color: #1e1e2e;
+  background-color: #cdd6f4;
 }
 
-#custom-arch {
-  margin-left: 5px;
-  padding: 0 10px;
-  font-size: 25px;
-  transition: color 0.5s;
+#workspaces button.active {
+  background-color: #1e1e2e;
+  color: #89b4fa;
 }
-#custom-arch:hover {
-  color: #1793d1;
+
+#workspaces button.urgent {
+  background-color: #1e1e2e;
+  color: #f38ba8;
+}
+
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: #1e1e2e;
+}
+
+#mpris.playing {
+  color: #a6e3a1;
+}
+
+#mpris.paused {
+  color: #9399b2;
+}
+
+#custom-sep {
+  padding: 0px;
+  color: #585b70;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#cpu {
+  color: #94e2d5;
+}
+
+#memory {
+  color: #cba6f7;
+}
+
+#clock {
+  color: #74c7ec;
+}
+
+#clock.simpleclock {
+  color: #89b4fa;
+}
+
+#window {
+  color: #cdd6f4;
+}
+
+#pulseaudio {
+  color: #b4befe;
+}
+
+#pulseaudio.muted {
+  color: #a6adc8;
+}
+
+#custom-logo {
+  color: #89b4fa;
+}
+
+#custom-power {
+  color: #f38ba8;
+}
+
+tooltip {
+  background-color: #181825;
+  border: 2px solid #89b4fa;
 }

@@ -30,3 +30,4 @@ alias rpi='kitty +kitten ssh jasjitbansia@192.168.1.8'
 alias bypass="node /home/jasjitbansia/Code/Discord-Upload-Limit-Bypasser/Local-Scripts/localScript.js"
 alias hypr="nano /home/jasjitbansia/.config/hypr/hyprland.conf"
 alias prv="kitten icat"
+eval "$(starship init bash)"
