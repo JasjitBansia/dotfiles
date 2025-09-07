@@ -45,6 +45,7 @@ window#waybar {
 #custom-power,
 #custom-spotify,
 #custom-notification,
+#network,
 #cpu,
 #tray,
 #memory,
@@ -93,7 +94,9 @@ window#waybar.empty #window {
 #window {
   color: #cdd6f4;
 }
-
+#network {
+  color: #74c7ec;
+}
 #pulseaudio {
   color: #b4befe;
 }

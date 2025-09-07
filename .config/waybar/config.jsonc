@@ -13,10 +13,12 @@
     "pulseaudio",
     "cpu",
     "memory",
+    "network",
     "clock",
     "clock#simpleclock",
     "tray",
-    "custom/notification"
+    "custom/notification",
+    "custom/power"
   ],
   "custom/spotify": {
     "format": "  {}",
@@ -89,6 +91,20 @@
     },
     "on-click": "pavucontrol"
   },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": "⏻"
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr} ",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
   "custom/notification": {
     "escape": true,
     "exec": "swaync-client -swb",
