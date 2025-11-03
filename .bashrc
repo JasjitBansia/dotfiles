@@ -23,8 +23,6 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-alias home="cd /home/jasjitbansia"
-alias cls="clear"
 alias rpi='kitty +kitten ssh jasjitbansia@192.168.1.8'
 alias server='kitty +kitten ssh jasjitbansia@192.168.1.9'
 alias hypr="nano /home/jasjitbansia/.config/hypr/hyprland.conf"
