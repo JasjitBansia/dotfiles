@@ -5,6 +5,10 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+if [ -f ~/.bash_secrets ]; then
+    . ~/.bash_secrets
+fi
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -23,8 +27,15 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+alias home="cd /home/jasjitbansia"
+alias cls="clear"
 alias rpi='kitty +kitten ssh jasjitbansia@192.168.1.8'
 alias server='kitty +kitten ssh jasjitbansia@192.168.1.9'
 alias hypr="nano /home/jasjitbansia/.config/hypr/hyprland.conf"
 alias prv="kitten icat"
+alias encode="/home/jasjitbansia/Scripts/encodeVideo.sh"
+function bypass() {
+    curl -F "video=@$1" "http://192.168.1.9:3030/upload?concise=true&token=$TMPVIDSSECRET"
+}
 eval "$(starship init bash)"
+export PATH="$HOME/.cargo/bin:$PATH"
